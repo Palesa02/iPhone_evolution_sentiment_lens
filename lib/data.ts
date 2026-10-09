@@ -29,7 +29,7 @@ const MODEL_PROFILES: Record<IPhoneModel, ModelProfile> = {
     baseSentiment: 0.68,
     amazonSentimentBias: 0.04,
     takealotSentimentBias: -0.02,
-    aspectAdjustments: { 'Battery Life': 0.15, Display: -0.1, 'Price Value': 0.1, Camera: 0.05 },
+    aspectAdjustments: { 'Battery Life': 0.15, Display: -0.1, 'Price Value': 0.1, 'Camera Quality': 0.05 },
     keywords: [
       { keyword: 'innovative', weight: 0.9 },
       { keyword: 'affordable', weight: 0.7 },
@@ -73,7 +73,7 @@ const MODEL_PROFILES: Record<IPhoneModel, ModelProfile> = {
     baseSentiment: 0.62,
     amazonSentimentBias: 0.03,
     takealotSentimentBias: -0.03,
-    aspectAdjustments: { Camera: 0.1, Display: 0.15, 'Price Value': -0.1, 'Battery Life': -0.15 },
+    aspectAdjustments: { 'Camera Quality': 0.1, Display: 0.15, 'Price Value': -0.1, 'Battery Life': -0.15 },
     keywords: [
       { keyword: 'LiDAR', weight: 0.8 },
       { keyword: 'Pro camera', weight: 0.7 },
@@ -94,7 +94,7 @@ const MODEL_PROFILES: Record<IPhoneModel, ModelProfile> = {
     baseSentiment: 0.72,
     amazonSentimentBias: 0.03,
     takealotSentimentBias: 0.01,
-    aspectAdjustments: { 'Battery Life': 0.2, Camera: 0.1, 'Price Value': 0.05 },
+    aspectAdjustments: { 'Battery Life': 0.2, 'Camera Quality': 0.1, 'Price Value': 0.05 },
     keywords: [
       { keyword: 'battery champion', weight: 0.8 },
       { keyword: 'cinematic mode', weight: 0.75 },
@@ -115,7 +115,7 @@ const MODEL_PROFILES: Record<IPhoneModel, ModelProfile> = {
     baseSentiment: 0.75,
     amazonSentimentBias: 0.03,
     takealotSentimentBias: 0.02,
-    aspectAdjustments: { Camera: 0.15, 'Battery Life': 0.15, Display: 0.1, Performance: 0.1 },
+    aspectAdjustments: { 'Camera Quality': 0.15, 'Battery Life': 0.15, Display: 0.1, Performance: 0.1 },
     keywords: [
       { keyword: 'ProMotion', weight: 0.9 },
       { keyword: '120Hz', weight: 0.85 },
@@ -136,7 +136,7 @@ const MODEL_PROFILES: Record<IPhoneModel, ModelProfile> = {
     baseSentiment: 0.6,
     amazonSentimentBias: 0.0,
     takealotSentimentBias: -0.03,
-    aspectAdjustments: { 'Price Value': -0.15, Performance: 0.0, Camera: 0.05 },
+    aspectAdjustments: { 'Price Value': -0.15, Performance: 0.0, 'Camera Quality': 0.05 },
     keywords: [
       { keyword: 'incremental', weight: 0.7 },
       { keyword: 'not worth upgrading', weight: 0.6 },
@@ -157,7 +157,7 @@ const MODEL_PROFILES: Record<IPhoneModel, ModelProfile> = {
     baseSentiment: 0.7,
     amazonSentimentBias: 0.03,
     takealotSentimentBias: 0.0,
-    aspectAdjustments: { Camera: 0.15, Display: 0.1, 'Price Value': -0.05 },
+    aspectAdjustments: { 'Camera Quality': 0.15, Display: 0.1, 'Price Value': -0.05 },
     keywords: [
       { keyword: 'Dynamic Island', weight: 0.9 },
       { keyword: '48MP', weight: 0.85 },
@@ -178,7 +178,7 @@ const MODEL_PROFILES: Record<IPhoneModel, ModelProfile> = {
     baseSentiment: 0.73,
     amazonSentimentBias: 0.04,
     takealotSentimentBias: 0.02,
-    aspectAdjustments: { 'Battery Life': 0.2, Camera: 0.15, Display: 0.1, 'Price Value': -0.1 },
+    aspectAdjustments: { 'Battery Life': 0.2, 'Camera Quality': 0.15, Display: 0.1, 'Price Value': -0.1 },
     keywords: [
       { keyword: 'battery monster', weight: 0.85 },
       { keyword: 'huge screen', weight: 0.7 },
@@ -198,7 +198,7 @@ const MODEL_PROFILES: Record<IPhoneModel, ModelProfile> = {
     baseSentiment: 0.55,
     amazonSentimentBias: -0.02,
     takealotSentimentBias: -0.05,
-    aspectAdjustments: { Heating: -0.3, 'Price Value': -0.1, Camera: 0.1 },
+    aspectAdjustments: { Heating: -0.3, 'Price Value': -0.1, 'Camera Quality': 0.1 },
     keywords: [
       { keyword: 'USB-C', weight: 0.9 },
       { keyword: 'heating', weight: 0.8 },
@@ -219,7 +219,7 @@ const MODEL_PROFILES: Record<IPhoneModel, ModelProfile> = {
     baseSentiment: 0.65,
     amazonSentimentBias: 0.02,
     takealotSentimentBias: -0.02,
-    aspectAdjustments: { 'Build Quality': 0.2, Camera: 0.1, Heating: -0.2, Performance: 0.15 },
+    aspectAdjustments: { 'Build Quality': 0.2, 'Camera Quality': 0.1, Heating: -0.2, Performance: 0.15 },
     keywords: [
       { keyword: 'titanium', weight: 0.95 },
       { keyword: 'A17 Pro', weight: 0.8 },
@@ -240,7 +240,7 @@ const MODEL_PROFILES: Record<IPhoneModel, ModelProfile> = {
     baseSentiment: 0.68,
     amazonSentimentBias: 0.03,
     takealotSentimentBias: 0.0,
-    aspectAdjustments: { Camera: 0.2, 'Battery Life': 0.15, 'Build Quality': 0.2, 'Price Value': -0.1 },
+    aspectAdjustments: { 'Camera Quality': 0.2, 'Battery Life': 0.15, 'Build Quality': 0.2, 'Price Value': -0.1 },
     keywords: [
       { keyword: 'titanium', weight: 0.9 },
       { keyword: '5x zoom', weight: 0.85 },
@@ -260,7 +260,7 @@ const MODEL_PROFILES: Record<IPhoneModel, ModelProfile> = {
     baseSentiment: 0.63,
     amazonSentimentBias: 0.02,
     takealotSentimentBias: -0.02,
-    aspectAdjustments: { Camera: 0.1, Performance: 0.1, 'Price Value': -0.05, 'iOS Experience': 0.1 },
+    aspectAdjustments: { 'Camera Quality': 0.1, Performance: 0.1, 'Price Value': -0.05, 'iOS Experience': 0.1 },
     keywords: [
       { keyword: 'Camera Control', weight: 0.85 },
       { keyword: 'Apple Intelligence', weight: 0.8 },
@@ -281,7 +281,7 @@ const MODEL_PROFILES: Record<IPhoneModel, ModelProfile> = {
     baseSentiment: 0.67,
     amazonSentimentBias: 0.03,
     takealotSentimentBias: 0.0,
-    aspectAdjustments: { Camera: 0.15, Performance: 0.15, Display: 0.1, 'Battery Life': 0.05 },
+    aspectAdjustments: { 'Camera Quality': 0.15, Performance: 0.15, Display: 0.1, 'Battery Life': 0.05 },
     keywords: [
       { keyword: 'Apple Intelligence', weight: 0.85 },
       { keyword: 'A18 Pro', weight: 0.8 },
@@ -302,7 +302,7 @@ const MODEL_PROFILES: Record<IPhoneModel, ModelProfile> = {
     baseSentiment: 0.69,
     amazonSentimentBias: 0.04,
     takealotSentimentBias: 0.02,
-    aspectAdjustments: { 'Battery Life': 0.2, Camera: 0.15, Performance: 0.15, Display: 0.1 },
+    aspectAdjustments: { 'Battery Life': 0.2, 'Camera Quality': 0.15, Performance: 0.15, Display: 0.1 },
     keywords: [
       { keyword: 'battery life', weight: 0.85 },
       { keyword: 'A18 Pro', weight: 0.75 },
@@ -322,7 +322,7 @@ const MODEL_PROFILES: Record<IPhoneModel, ModelProfile> = {
     baseSentiment: 0.6,
     amazonSentimentBias: 0.0,
     takealotSentimentBias: -0.05,
-    aspectAdjustments: { 'iOS Experience': 0.2, Camera: 0.1, 'Price Value': -0.15 },
+    aspectAdjustments: { 'iOS Experience': 0.2, 'Camera Quality': 0.1, 'Price Value': -0.15 },
     keywords: [
       { keyword: 'AI', weight: 0.9 },
       { keyword: 'Apple Intelligence', weight: 0.85 },
@@ -343,7 +343,7 @@ const MODEL_PROFILES: Record<IPhoneModel, ModelProfile> = {
     baseSentiment: 0.64,
     amazonSentimentBias: 0.02,
     takealotSentimentBias: -0.03,
-    aspectAdjustments: { Camera: 0.25, Performance: 0.2, 'iOS Experience': 0.15, 'Price Value': -0.2 },
+    aspectAdjustments: { 'Camera Quality': 0.25, Performance: 0.2, 'iOS Experience': 0.15, 'Price Value': -0.2 },
     keywords: [
       { keyword: 'AI', weight: 0.95 },
       { keyword: 'camera revolution', weight: 0.8 },
@@ -364,7 +364,7 @@ const MODEL_PROFILES: Record<IPhoneModel, ModelProfile> = {
     baseSentiment: 0.66,
     amazonSentimentBias: 0.03,
     takealotSentimentBias: -0.02,
-    aspectAdjustments: { Camera: 0.25, 'Battery Life': 0.2, Performance: 0.2, 'Price Value': -0.25 },
+    aspectAdjustments: { 'Camera Quality': 0.25, 'Battery Life': 0.2, Performance: 0.2, 'Price Value': -0.25 },
     keywords: [
       { keyword: 'AI', weight: 0.9 },
       { keyword: 'camera', weight: 0.85 },

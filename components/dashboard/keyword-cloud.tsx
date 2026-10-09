@@ -43,9 +43,8 @@ export default function KeywordCloud({ summaries }: KeywordCloudProps) {
               style={{
                 fontSize: `${fontSize}px`,
                 color: '#A56C75',
-                opacity,
-                animationDelay: `${i * 80}ms`,
                 opacity: 0,
+                animationDelay: `${i * 80}ms`,
               }}
             >
               {kw.keyword}
