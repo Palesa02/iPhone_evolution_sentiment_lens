@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 30 15% 25%;
+    --card: 0 0% 100%;
+    --card-foreground: 30 15% 25%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 15% 25%;
+    --primary: 353 29% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 8 57% 94%;
+    --secondary-foreground: 353 29% 40%;
+    --muted: 30 20% 96%;
+    --muted-foreground: 30 10% 50%;
+    --accent: 8 57% 94%;
+    --accent-foreground: 353 29% 40%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 20 30% 90%;
+    --input: 20 30% 90%;
+    --ring: 353 29% 53%;
+    --chart-1: 353 29% 53%;
+    --chart-2: 200 65% 50%;
+    --chart-3: 145 45% 50%;
+    --chart-4: 40 80% 55%;
+    --chart-5: 280 50% 60%;
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'cv11', 'ss01';
+    font-variation-settings: 'opsz' 32;
+  }
+}
+
+.font-playfair {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+.font-inter {
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.5s ease-out forwards;
+}
+
+.heatmap-cell {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.heatmap-cell:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  z-index: 10;
+}
+
+.scroll-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.scroll-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scroll-thin::-webkit-scrollbar-thumb {
+  background: #E8D0D0;
+  border-radius: 3px;
+}
+.scroll-thin::-webkit-scrollbar-thumb:hover {
+  background: #D4B0B0;
+}
